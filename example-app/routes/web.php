@@ -14,22 +14,14 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-Route::get('/ariful', function () {
-    return ('welcome ariful');
+route::get('/ariful',function(){
+    return ('Welcome ariful');
 });
 
 route::get('/samira',function(){
-    return('welcome samira');
+    return ('Welcome samira');
 });
 
-route::get('/',function(){
-    return view('home');
-});
-
-route::get('/about',function(){
-    return view('about');
-});
-
-route::get('/contact',function(){
-    return view('contact');
+Route::get('/', function () {
+    return view('welcome');
 });
