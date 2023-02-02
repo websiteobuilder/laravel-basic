@@ -14,6 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 
+<<<<<<< Updated upstream
 route::get('/ariful',function(){
     return ('Welcome ariful');
 });
@@ -25,3 +26,40 @@ route::get('/samira',function(){
 Route::get('/', function () {
     return view('welcome');
 });
+=======
+// Route::get('/ariful', function () {
+//     return ('welcome ariful');
+// });
+
+// route::get('/samira',function(){
+//     return('welcome samira');
+// });
+
+// route::get('/',function(){
+//     return view('home');
+// });
+
+// route::get('/about',function(){
+//     return view('about');
+// });
+
+// route::get('/contact',function(){
+//     return view('contact');
+// });
+
+use App\Http\Controllers\Site;
+
+// Route::get('/', [Site::class, 'Home']);
+
+// Route::get('/about', [Site::class, 'About']);
+
+// Route::get('/contact', [Site::class, 'Contact']);
+
+
+// route::get('/{NameValue}',[Site::class, 'name']);
+
+
+route::get('/{FirstName}/{LastName}',[Site::class, 'name']);
+
+
+>>>>>>> Stashed changes
