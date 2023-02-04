@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Site;
 
 /*
 |--------------------------------------------------------------------------
@@ -12,21 +13,10 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-
-<<<<<<< Updated upstream
-route::get('/ariful',function(){
-    return ('Welcome ariful');
-});
-
-route::get('/samira',function(){
-    return ('Welcome samira');
-});
-
-Route::get('/', function () {
-    return view('welcome');
-});
-=======
+    //BASIC ROUTING
+// Route::get('/', function () {
+//     return ('welcome Home');
+// });
 // Route::get('/ariful', function () {
 //     return ('welcome ariful');
 // });
@@ -35,6 +25,7 @@ Route::get('/', function () {
 //     return('welcome samira');
 // });
 
+    //ROUTING WITH VIEW
 // route::get('/',function(){
 //     return view('home');
 // });
@@ -47,19 +38,17 @@ Route::get('/', function () {
 //     return view('contact');
 // });
 
-use App\Http\Controllers\Site;
-
+    //ROUTING WITH CONTROLLER ALSO HYPERLINK
 // Route::get('/', [Site::class, 'Home']);
 
 // Route::get('/about', [Site::class, 'About']);
 
 // Route::get('/contact', [Site::class, 'Contact']);
 
-
-// route::get('/{NameValue}',[Site::class, 'name']);
-
-
-route::get('/{FirstName}/{LastName}',[Site::class, 'name']);
+    //ROUTING WITH PARAMETER
+route::get('/{Name}',[Site::class, 'name']);
 
 
->>>>>>> Stashed changes
+// route::get('/{Name_1}/{Name_2}',[Site::class, 'name_1']);
+
+

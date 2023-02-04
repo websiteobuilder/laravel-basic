@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Contracts\View\View;
 use Illuminate\Http\Request;
 
 class Site extends Controller
 {
+        //ROUTING WITH CONTROLLER
     // function Home (){
     //     return "I am from site Home controller";
     // }
@@ -16,7 +18,7 @@ class Site extends Controller
     //     return "I am from site Home controller";
     // }
 
-
+        //ROUTING WITH CONTROLLER AND VIEW also hyperlink
     // function Home (){
     //     return view('home');
     // }
@@ -27,13 +29,23 @@ class Site extends Controller
     //     return view('contact');
     // }
 
+        //ROUTING PARAMETER WITH CONTROLLER
+    // function name($Name){
+    //     return "You name is $Name";
+    // }
 
-        // function name($NameValue){
-        //     return "You name is $NameValue";
-        // }
+
+    // function name_1($Name_1,$Name_2){
+    //     return "You entered $Name_1/$Name_2 thats is a wrong url";
+    // }
+
+        //ROUTING PARAMETER WITH CONTROLLER AND VIEW
+    function name(){
+        return View('error');
+    }
 
 
-        function name($FirstName,$LastName){
-            return "You First name is $FirstName<br> Your last name is $LastName";
-        }
+    // function name_1($Name_1,$Name_2){
+    //     return View();"You entered $Name_1/$Name_2 thats is a wrong url";
+    // }
 }
